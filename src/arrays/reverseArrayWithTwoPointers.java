@@ -1,0 +1,31 @@
+package arrays;
+//import java.util.Arrays;
+//import static java.util.Collections.swap;
+public class reverseArrayWithTwoPointers {
+    public static void main(String[] args) {
+        int[] arr = {10, 20, 30, 40, 50, 60, 70};
+        int n = arr.length;
+        for (int ele : arr) {
+            System.out.print(ele + " ");
+        }
+        //int i=1,j=5;//swap some part of the array
+        int i = 0, j = n - 1;
+        System.out.println();
+        while (i <= j) {
+            swap(arr, i, j);
+            i++;
+            j--;
+        }
+        for (int ele : arr) {
+            System.out.print(ele + " ");
+        }
+        System.out.println();
+    }
+        //REVERSE function
+        public static void swap(int[] arr,int i,int j){
+            int temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+        }
+
+}
