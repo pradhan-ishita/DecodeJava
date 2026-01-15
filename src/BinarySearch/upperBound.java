@@ -1,28 +1,22 @@
+package BinarySearch;
+
 public class upperBound {
-
-    static class Solution {
-        public int[] searchRange(int[] arr, int target) {
-            int[] ans = {-1, -1};
+    public static void main(String[] args) {
+            int[] arr = {10, 20, 30,30, 40, 50, 60, 70};
+            int x = 8;
             int n = arr.length;
-
-            // First check if element is present
             int lo = 0, hi = n - 1;
-            boolean flag = false;
-
+            int ub = n;
             while (lo <= hi) {
                 int mid = lo + (hi - lo) / 2;
-                if (arr[mid] == target) {
-                    flag = true;
-                    break;
-                } else if (arr[mid] > target) {
+                if (arr[mid] > x) {
+                    ub = mid;
                     hi = mid - 1;
-                } else {
-                    lo = mid + 1;
-                }
+
+                } else lo = mid + 1;
             }
+            System.out.println(ub);
+        }
+    }
 
-            if (!flag) return ans;
 
-            // Find lower bound (first occurrence)
-            lo = 0;
-            hi = n - 1;
