@@ -7,10 +7,16 @@ public class selectionSort {
         }
         System.out.println();
     }
+    public static void swap(int[]arr,int i,int j){
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j ] = temp;
+    }
         public static void main (String[]args){
             int[] arr = {10, -4, 20, 1, -6, 8};
             int n = arr.length;
             print(arr);
+            //selection sort
             for (int i = 0; i < n - 1; i++) {
                 int min = Integer.MAX_VALUE;
                 int minindex = -1;
@@ -20,10 +26,7 @@ public class selectionSort {
                         minindex = j;
                     }
                 }
-                //swap arr[i] and arr[minindex]
-                int temp = arr[i];
-                arr[i] = arr[minindex];
-                arr[minindex] = temp;
+               swap(arr,i,minindex);
             }
             print(arr);
         }
