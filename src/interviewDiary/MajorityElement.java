@@ -13,7 +13,7 @@ public class MajorityElement {
             if (count == 0) {
                 cand = nums[i];
             }
-            if (cand == nums[i]) {
+            if (cand==nums[i]) {
                 count++;
             } else {
                 count--;
