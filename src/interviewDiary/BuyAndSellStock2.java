@@ -2,7 +2,7 @@ package interviewDiary;
 
 public class BuyAndSellStock2 {
     public static void main(String[] args) {
-        int prices[]= {7,1,5,3,6,4};
+        int prices[]= {7,6,5,3,2,1};
         System.out.println(BuyAndSellStock2(prices));
     }
     public static int BuyAndSellStock2(int[]prices ){
